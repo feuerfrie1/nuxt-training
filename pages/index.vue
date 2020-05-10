@@ -1,17 +1,14 @@
 <template>
   <div class="container">
-    <h1>Hello</h1>
-    <input type="text" v-model="text" />
-    <p>{{ text }}</p>
+    <statistics-block></statistics-block>
   </div>
 </template>
 
 <script>
+import Statistics from '@/components/Statistics/Statistics';
 export default {
-  data() {
-    return {
-      text: '',
-    };
+  components: {
+    'statistics-block': Statistics,
   },
 };
 </script>
