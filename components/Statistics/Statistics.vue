@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="statistics">
     <h2 class="statistics__title">Статистика по онкозаболеваниям</h2>
     <div class="statistics__container">
       <div class="facts__card">
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
