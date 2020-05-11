@@ -71,8 +71,12 @@ export default {
   margin-bottom: 60px;
 }
 
+.statistics {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
 .container {
-  max-width: 1440px;
   margin: 30px auto;
   width: 90%;
 }
