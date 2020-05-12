@@ -1,0 +1,34 @@
+<template>
+  <div class="popup">
+    <img
+      src="../static/close-icon.svg"
+      alt
+      class="close-icon"
+      @click="$emit('closePopup')"
+    />
+    <slot></slot>
+  </div>
+</template>
+
+<script>
+export default {
+  components: {},
+};
+</script>
+
+<style scoped>
+.popup {
+  min-width: 920px;
+  background-color: #ffffff;
+  min-height: 324px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.close-icon {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+}
+</style>
