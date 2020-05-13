@@ -3,7 +3,7 @@
     <footer class="footer page__footer">
       <div class="footer__container">
         <h2 class="footer__title">
-          Спасибо всем, кто помог&nbsp;состояться этому&nbsp;проекту
+          Спасибо&nbsp;всем,&nbsp;кто помог состояться этому&nbsp;проекту
         </h2>
         <ul class="footer__list">
           <li class="footer__list-item">
@@ -14,10 +14,11 @@
           </li>
         </ul>
         <div class="footer__container-link">
-          <a href class="container__link">Мы в Инстаграме и Youtube</a>
+          <a href class="container__link"
+            >Мы&nbsp;в&nbsp;Инстаграме&nbsp;и&nbsp;Youtube</a
+          >
           <p
-            href
-            class="container__link container__link_another-black"
+            class="container__link container__link_color_another-black"
             @click="popupHandler"
           >
             Поделитесь &#8599;
@@ -107,14 +108,20 @@ export default {
 .footer__container {
   margin: 60px 60px 0;
   min-height: 108px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 100px;
 }
 .footer__title {
   max-width: 340px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
 }
 .footer__container-link {
   display: flex;
+  grid-column-start: 4;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -123,8 +130,11 @@ export default {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  min-width: 188px;
-  margin-right: calc(35%);
+  flex-basis: 188px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
 }
 .footer__list-item {
   max-width: 76px;
@@ -134,7 +144,7 @@ export default {
   color: currentColor;
 }
 .footer__container-link {
-  min-width: 300px;
+  max-width: 300px;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -144,7 +154,7 @@ export default {
   text-decoration: none;
   color: currentColor;
 }
-.container__link_another-black {
+.container__link_color_another-black {
   color: #121212;
 }
 .footer__copyright {
@@ -161,6 +171,10 @@ export default {
   max-width: 200px;
   margin: 40px auto 0;
   text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
 }
 .popup__list {
   list-style: none;
@@ -170,8 +184,121 @@ export default {
   margin: 100px auto 100px;
   padding: 0;
 }
-.popup__link {
+.container__link_color_another-black:hover {
+  opacity: 0.8;
 }
-.popup__link-icon {
+@media screen and (max-width: 1281px) {
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50зч 50px 0;
+  }
+  .footer__title {
+    max-width: 305px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+  .footer__list {
+    max-width: 178px;
+    font-size: 16px;
+  }
+  .footer__list-item {
+    max-width: 68px;
+  }
+  .footer__container-link {
+    grid-column-start: 3;
+    max-width: 265px;
+    font-size: 16px;
+  }
+  .footer__copyright {
+    margin: 0 50px 50px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .footer__container {
+    grid-column-gap: 30px;
+  }
+  .footer__title {
+    max-width: 288px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .footer__list {
+    max-width: 178px;
+    font-size: 16px;
+  }
+  .footer__container-link {
+    grid-column-start: 3;
+    max-width: 221px;
+    font-size: 16px;
+  }
+  .footer__copyright {
+    margin: 0 50px 50px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .footer__title {
+    max-width: 288px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .footer__list {
+    max-width: 178px;
+    font-size: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer__list-item {
+    margin-bottom: 14px;
+  }
+  .footer__container-link {
+    max-width: 221px;
+    font-size: 16px;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container__link_color_another-black {
+    margin-top: 14px;
+  }
+  .footer__copyright {
+    margin: 0 50px 50px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .footer__container {
+    display: inline;
+    margin: 50px 15px 0;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .footer__title {
+    margin-bottom: 50px;
+    max-width: 288px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .footer__list-item {
+    margin-bottom: 18px;
+  }
+  .footer__container-link {
+    margin-top: 18px;
+    max-width: 179px;
+  }
+  .container__link_color_another-black {
+    margin-top: 18px;
+  }
+  .footer__copyright {
+    margin: 50px 15px 50px;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .footer__copyright-text {
+    margin-bottom: 10px;
+  }
+  .popup__title {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 </style>

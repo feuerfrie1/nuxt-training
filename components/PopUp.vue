@@ -31,4 +31,24 @@ export default {
   top: 35px;
   right: 35px;
 }
+@media screen and (max-width: 1281px) {
+  .popup {
+    min-width: 800px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .popup {
+    min-width: 580px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .popup {
+    min-width: 290px;
+    min-height: 191px;
+  }
+  .close-icon {
+    top: 13px;
+    right: 12px;
+  }
+}
 </style>
