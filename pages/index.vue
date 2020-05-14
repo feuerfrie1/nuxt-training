@@ -1,17 +1,22 @@
 <template>
-  <div class="container">
-    <h1>Hello</h1>
-    <input type="text" v-model="text" />
-    <p>{{ text }}</p>
+  <div>
+    <stories />
+    <instagram />
+    <your-story />
   </div>
 </template>
 
 <script>
+import Stories from '@/components/Stories';
+import Instagram from '@/components/Instagram';
+import TellYourStory from '@/components/TellYourStory';
+import Storycard from '@/components/Storycard';
 export default {
-  data() {
-    return {
-      text: '',
-    };
+  components: {
+    stories: Stories,
+    instagram: Instagram,
+    'your-story': TellYourStory,
+    'story-card': Storycard,
   },
 };
 </script>
